@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    form h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    input:focus, select:focus {
+      border-color: #4f46e5;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #4338ca;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/home" method="post">
+    {% csrf_token %}
+    <h2>Property Details</h2>
+     {% if messages %}
+       {% for message in messages %}
+           <h3>{{ message }}</h3>
+       {% endfor %}
+       {% endif %}    
+    <label for="area">Area</label>
+    <input type="text" name="area" id="area" placeholder="Enter the area" />
+
+    <label for="bedroom">Bedroom</label>
+    <input type="number" name="bedroom" id="bedroom" placeholder="Number of bedrooms" />
+
+    <label for="bathroom">Bathroom</label>
+    <input type="number" name="bathroom" id="bathroom" placeholder="Number of bathrooms" />
+
+    <label for="parking">Parking</label>
+    <input type="number" name="parking" id="parking" placeholder="Number of parking spots" />
+
+    <label for="stories">Store Room</label>
+    <input type="number" name="stories" id="stories" placeholder="Number of store rooms" />
+
+    <label for="furnishingstatus">Furnishing Status</label>
+    <select name="furnishingstatus" id="furnishingstatus">
+      <option value="0">Unfurnished</option>
+      <option value="1">Semi Furnished</option>
+      <option value="2">Furnished</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

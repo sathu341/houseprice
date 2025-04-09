@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+MX+Guides&display=swap');
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6dd5fa, #2980b9); /* blue gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    /* font-family: "Playwrite MX Guides", cursive; */
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+h1,h2,h3,h4,h5,h6{
+   
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+      
+      
+}  
+p{
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+label,input{
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.wrapper{
+    width:40%;
+   
+    /* margin:0px auto; */
+    border:2px solid  #5447a9;
+    border-radius: 12px;
+    padding:10px; 
+ 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: #4682B4;
+}
+.wrapper label{
+    font-size: 30px;
+    color:#FFF5EE;
+}
+.wrapper input{
+    width:100%;
+    border: none;
+    padding:10px;
+    border-radius:12px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+button{
+    padding:10px;
+    margin:10px;
+    border: none;
+    /* font-family: "Playwrite MX Guides", cursive; */
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:rgb(20, 1, 37);
+    background-color: aquamarine;
+
+}
+.wrapper select{
+    width:100%;
+    border: none;
+    padding:10px;
+    border-radius:12px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
